@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="tw-bg-Cyan tw-font-josefin tw-py-10 tw-flex tw-justify-center">
+    <div class="tw-max-w-4xl tw-w-full tw-bg-azure tw-rounded-lg tw-shadow-lg tw-p-8">
+        <h1 class="tw-text-center tw-text-3xl tw-font-bold tw-text-Cyan">Doctor's Registration</h1>
+
+        <img src="logo.svg" alt="" width="75px" height="75px" class="tw-mx-auto" onclick="window.location.href='main.html'">
+
+        <form action="#" class="tw-mt-8" onsubmit="return formvalid()">
+            <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6">
+                <div>
+                    <label for="dname" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Doctor's Full
+                        Name</label>
+                    <input type="text" id="dname" name="dname" placeholder="Enter full name"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan" required>
+                </div>
+                <div>
+                    <label for="mnum" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Mobile Number</label>
+                    <input type="tel" id="mnum" name="mnum" placeholder="Enter mobile number"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+                <div>
+                    <label for="email" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Email ID</label>
+                    <input type="email" id="email" placeholder="Enter email ID"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+                <div>
+                    <label for="DOB" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Date of Birth</label>
+                    <input type="date" id="DOB"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+                <div>
+                    <label for="city-dropdown" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">City</label>
+                    <select id="city-dropdown"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                        <option value="">Choose the city </option>
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Vadodara">Vadodara</option>
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Kanpur">Kanpur</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="state-dropdown" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">State</label>
+                    <select id="state-dropdown"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                        <option value="">Choose the state</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="UP">UP</option>
+
+                    </select>
+                </div>
+                <div>
+                    <label for="pwd" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Password</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="Enter Password"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+                <div>
+                    <label for="cpwd" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Confirm Password</label>
+                    <input type="password" id="cpwd" name="cpwd" placeholder="Enter Confirm Password"
+                        class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+                <div class="tw-justify-center"> 
+                    <label for="deg" class="tw-block tw-text-sm tw-font-medium tw-text-Cyan">Upload Degree's Proof</label>
+                    <input type="file" id="deg" name="deg" placeholder="Upload Degree proof"
+                    class="tw-mt-1 tw-p-2 tw-w-full tw-rounded-lg tw-border tw-border-Cyan tw-bg-azure tw-text-Cyan">
+                </div>
+            </div>
+
+            <div class="tw-flex tw-justify-center tw-mt-6">
+                <button type="submit"
+                    class="tw-px-6 tw-py-2 tw-border tw-border-Cyan tw-rounded-lg tw-text-Cyan hover:tw-bg-Cyan hover:tw-text-white tw-transition-colors">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="drscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <title>PhysioGo Registration page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #0085a1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #006e89;
+        }
+
+        form {
+            margin-top: 1%;
+            width: 41.66%;
+        }
+
+        .container {
+            background-color: #F0FFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 110, 137, 0.5);
+        }
+
+        .container input {
+            width: 100%;
+            justify-content: center;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+        }
+
+        .container select {
+            background-color: #F0FFFF;
+            border: 1px solid #006e89;
+            color: #006e89;
+            font-size: 0.875rem;
+            border-radius: 0.5rem;
+            padding: 0.625rem;
+            outline: none;
+        }
+
+        .container button {
+            border: 1px solid #006e89;
+            border-radius: 0.25rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.5s;
+            margin-bottom: 1rem;
+            outline: none;
+            background: transparent;
+        }
+
+        .container button:hover {
+            color: white;
+            background-color: #006e89;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+            <div>
+                <img src="logo.svg" alt="" width="100px" height="100px" onclick="window.location.href='main.html'">
+            </div>
+            <h1 style="font-size: 30px; font-weight: bold;">Patient Registration</h1>
+            <div style="width: 100%; display: flex; justify-content: center; margin: 2% 0">
+                <input type="email" id="email" placeholder="Email ID"
+                    style="outline: none; width: 100%; background-color: transparent;">
+            </div>
+            <div style="width: 100%; display: flex; margin: 2% 0; justify-content: center;">
+                <input type="text" id="Fname" placeholder="First Name"
+                    style="outline: none; width: 100%; background-color: transparent;" required>
+            </div>
+            <div
+                style="width: 100%; display: flex; justify-content: center; margin: 2% 0; padding-top: 4px; padding-bottom: 4px;">
+                <input type="text" id="Lname" placeholder="Last Name"
+                    style="outline: none; width: 100%; background-color: transparent;" required>
+            </div>
+            <div
+                style="width: 100%; display: flex; justify-content: center; margin: 2% 0; padding-top: 4px; padding-bottom: 4px;">
+                <input type="tel" id="mob" placeholder="Mobile Number"
+                    style="outline: none; width: 100%; background-color: transparent;" required pattern="[0-9]{9}">
+            </div>
+            <div style="display: flex; min-width: 20vw; justify-content: stretch;">
+                <label for="DOB" style="min-width: 100px; margin-right: 12%;">Date of Birth: </label>
+                <input type="date" name="DOB" id="DOB" placeholder="Date of Birth"
+                    style="outline: none; background-color: #06b6d4; color: white; padding: 3px; border-radius: 4px; border:none; margin-bottom: 4%;">
+            </div>
+            <div style="display: flex; justify-content: center; width: 50%; ">
+                <label for="male">Male </label>
+                <input type="radio" name="gender" id="male" required>
+                <label for="female">Female </label>
+                <input type="radio" name="gender" id="female" required>
+            </div>
+            <div style="margin-top: 1.15rem; color: #006e89; display: flex; justify-content: center;">
+                <select id="city-dropdown"
+                    style="background-color: #F0FFFF; border: 1px solid #006e89; color: #006e89; font-size: 0.875rem; border-radius: 0.5rem; padding: 0.625rem;"
+                    required>
+                    <option value="">Choose a city</option>
+                    <option value="New Delhi">New Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Vadodara">Vadodara</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                </select>
+            </div>
+            <div style="width: 83.33%; display: flex; justify-content: center; margin:2% 0">
+                <input type="Password" name="Password" id="Password" placeholder="Password"
+                    style="outline: none; width: 100%; background-color: transparent;">
+            </div>
+            <div style="width: 83.33%; display: flex; justify-content: center; margin: 2% 0">
+                <input type="Password" name="CPassword" id="CPassword" placeholder="Confirm Password"
+                    style="outline: none; width: 100%; background-color: transparent;">
+            </div>
+            <div>
+                <button type="button"
+                    style=" border-radius: 0.25rem; padding: 0.3rem 1rem; transition: all 0.5s; margin-top: 1rem; outline: none;"
+                    id="btn" onclick="formvalid()">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
